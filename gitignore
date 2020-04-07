@@ -1,0 +1,6 @@
+# emacs files
+*~
+*#
+
+# vscode files
+.vscode

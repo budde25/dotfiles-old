@@ -1,0 +1,11 @@
+[credential]
+	helper = store
+[user]
+	email = budde25@gmail.com
+	name = budde25
+[commit]
+[core]
+	editor = emacs -nw
+	excludesFile = ~/gitignore-global
+[color]
+	ui = true

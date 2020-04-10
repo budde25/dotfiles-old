@@ -8,6 +8,9 @@ path=(
 
 export PATH
 
+# Setting Xauthority
+export XAUTHORITY=$HOME/.Xauthority
+
 # XDG Compliance
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache

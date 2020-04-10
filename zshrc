@@ -1,6 +1,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/oh-my-zsh"
+export XAUTHORITY=$HOME/.Xauthority
 ZSH_THEME="risto"
 
 # Uncomment the following line to use hyphen-insensitive completion.

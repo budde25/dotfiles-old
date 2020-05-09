@@ -3,15 +3,7 @@ set $mod Mod4
 
 font pango:Noto Mono Regular 8
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock -n lock
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
@@ -29,12 +21,6 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus, vim keybind
 bindsym $mod+h focus left
@@ -83,10 +69,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
-# Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 "
 set $ws2 "2 "
@@ -127,7 +109,6 @@ assign [class="firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="Slack"] $ws5
 assign [class="discord"] $ws6
-for_window [class="spotify"] move to $ws10
 
 workspace $ws2 output DVI-D-0
 workspace $ws4 output DVI-D-0
@@ -171,19 +152,17 @@ bindsym $mod+r mode "resize"
 
 hide_edge_borders both
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+# XRESOURCES
+#set_from_resource $fg foreground
+#set_from_resource $bg background 
 
-# window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
-
+# CLASS                 BORDER  BACK    TEXT    INDICATOR
+client.focused          $bg     $bg     $fg     $bg
+client.focused_inactive $bg     $bg     $fg     $bg 
+client.unfocused        $bg     $bg     $fg     $bg
+client.urgent           $bg     $bg     $fg     $bg 
+client.placeholder      $bg     $bg     $fg     $bg
+ 
 # rofi
 bindsym $mod+d exec rofi -show run
 
@@ -192,12 +171,6 @@ bindsym $mod+d exec rofi -show run
 bar {
         status_command i3status
 	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
 }
 

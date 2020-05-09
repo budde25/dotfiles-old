@@ -7,3 +7,7 @@ set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
 
 syntax on
 set number
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set ignorecase

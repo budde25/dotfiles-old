@@ -3,9 +3,9 @@ typeset -U PATH path
 path=(
 	"$HOME/.local/bin"
 	"$HOME/.scripts"
-    "$HOME/.cargo/bin"
-    "$HOME/.local/share/flutter/bin"
-    "$HOME/.emacs.d/bin"
+	"$HOME/.cargo/bin"
+	"$HOME/.local/share/flutter/bin"
+	"$HOME/.emacs.d/bin"
 	"$path[@]"
 	)
 
@@ -14,7 +14,6 @@ export PATH
 # Setting Xauthority
 export XAUTHORITY=$HOME/.Xauthority
 
-
 # XDG Compliance
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
@@ -22,7 +21,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 
 export HISTFILE=$XDG_DATA_HOME/zsh/history
 export ANDROID_SDK_HOME=$XDG_CONFIG_HOME/android
-export VIMINIT=$XDG_CONFIG_HOME/vim/vimrc
+export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
 export EM_CONFIG=$XDG_CONFIG_HOME/emscripten/config
 export EM_CACHE=$XDG_CACHE_HOME/emscripten/cache
 export EM_PORTS=$XDG_DATA_HOME/emscripten/cache

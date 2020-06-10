@@ -39,3 +39,6 @@ export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
 export XSERVERRC=$XDG_CONFIG_HOME/X11/xserverrc
 export LESSHISTFILE=-
 export ANDROID_SDK_ROOT=$XDG_DATA_HOME/android
+
+# Emsdk Setup
+# source /opt/emsdk/emsdk_env.sh

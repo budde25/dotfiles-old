@@ -30,7 +30,7 @@ export LANG=en_US.UTF-8
 
 # Sets up work environment at csl
 if [[ $HOST == *.cs.wisc.edu ]]; then
-    source $XDG_CONFIG_HOME/dotfiles/workrc
+    source $DOTFILES/workrc
 fi
 
 # User configuration

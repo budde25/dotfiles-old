@@ -1,11 +1,13 @@
 [credential]
 	helper = store
 [user]
-	email = budde25@gmail.com
-	name = budde25
+	email = ethan@ebudd.io
+	name = Ethan Budd
 [commit]
 [core]
-	editor = emacs -nw
+	editor = $EDITOR
 	excludesFile = ~/gitignore-global
 [color]
 	ui = true
+[pull]
+	rebase = false

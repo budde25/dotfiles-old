@@ -2,6 +2,7 @@
 export DOTFILES="$HOME/.config/dotfiles"
 
 # ZSH
+mkdir -p $HOME/.local/share/zsh
 ln -fs $DOTFILES/zshrc $HOME/.zshrc
 
 # GIT

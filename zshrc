@@ -121,9 +121,14 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git sudo pip tmux common-aliases cargo command-not-found copybuffer copydir copyfile cp history ripgrep rust rustup web-search vi-mode nvm)  
 
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/antigen.zsh
+antigen bundle MichaelAquilina/zsh-you-should-use
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
 
 # User configuration
 

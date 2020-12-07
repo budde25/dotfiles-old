@@ -27,6 +27,13 @@ export XSERVERRC=$XDG_CONFIG_HOME/X11/xserverrc
 export LESSHISTFILE=-
 export ANDROID_SDK_ROOT=$XDG_DATA_HOME/android
 
+
+# Firefox Config
+if [[ $WAYLAND_DISPLAY == wayland-0 ]]; then
+    MOZ_ENABLE_WAYLAND=1
+fi
+
+
 # Custom motd
 if [[ $- == *i* ]]; then
   if [[ -a "${HOME}/.local/bin/neofetch" ]]; then

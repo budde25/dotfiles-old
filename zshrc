@@ -29,7 +29,6 @@ export ANDROID_SDK_ROOT=$XDG_DATA_HOME/android
 
 # Custom motd
 if [[ $- == *i* ]]; then
-  eval clear
   if [[ -a "${HOME}/.local/bin/neofetch" ]]; then
     eval ~/.local/bin/neofetch --config ${HOME}/.config/neofetch/config
   fi

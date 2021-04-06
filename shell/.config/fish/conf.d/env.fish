@@ -28,4 +28,24 @@ set -gx XSERVERRC $XDG_CONFIG_HOME/X11/xserverrc
 set -gx LESSHISTFILE -
 set -gx ANDROID_SDK_ROOT $XDG_DATA_HOME/android
 set -gx ANDROID_SDK_HOME $XDG_DATA_HOME/android
-set -gx EDITOR nvim
+
+# Prefered editor
+if command -v nvim > /dev/null
+	set -gx EDITOR nvim
+	set -gx VISUAL nvim
+else if command -v vim > /dev/null
+	set -gx EDITOR vim
+	set -gx VISUAL vim
+else
+	set -gx EDITOR nano
+end
+
+if test -n "$DISPLAY"
+	if command -v firefox-developer-edition > /dev/null
+		set -gx BROWSER firefox-developer-edition
+	else if command -v firefox > /dev/null
+		set -gx BROWSER firefox
+	end
+else
+	set -gx BROWSER links
+end

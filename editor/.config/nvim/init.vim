@@ -1,3 +1,8 @@
+" Teach a vim to fish...
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 " Vim/Neovim config
 let mapleader = "\<space>" 
 
@@ -20,6 +25,9 @@ Plug 'machakann/vim-highlightedyank' " Highlights yanked test
 
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language Server Protocol
+
+" Language Support
+Plug 'dag/vim-fish'
 
 call plug#end()
 
@@ -240,6 +248,7 @@ set hidden
 set nowrap
 set nojoinspaces
 set noshowmode
+syntax enable
 
 "Gui
 set guioptions-=T " Removes the toolbar

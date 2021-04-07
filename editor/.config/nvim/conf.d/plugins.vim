@@ -170,3 +170,10 @@ let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-git']
 "
 
 let g:rustfmt_autosave = 1
+
+"
+" FZF
+"
+noremap <leader>s :Rg<CR>
+nnoremap <leader>f :Files<CR>
+let g:fzf_layout = { 'down': '~20%' }

@@ -10,8 +10,8 @@ let mapleader = "\<space>"
 set nocompatible
 
 " Source config files
-$HOME/.config/nvim/conf.d/plug.vim
-$HOME/.config/nvim/conf.d/general.vim
-$HOME/.config/nvim/conf.d/plugins.vim
-$HOME/.config/nvim/conf.d/keys.vim
+source $HOME/.config/nvim/conf.d/plug.vim
+source $HOME/.config/nvim/conf.d/general.vim
+source $HOME/.config/nvim/conf.d/plugins.vim
+source $HOME/.config/nvim/conf.d/keys.vim
 

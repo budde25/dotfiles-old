@@ -30,12 +30,18 @@ endif
 
 " Editor
 filetype plugin indent on
-set autoindent
+syntax enable
 set hidden
 set nowrap
 set nojoinspaces
 set noshowmode
-syntax enable
+
+" Tabs
+set autoindent
+set expandtab
+set tabstop=8
+set smartindent
+set shiftwidth=4
 
 "Gui
 set guioptions-=T " Removes the toolbar

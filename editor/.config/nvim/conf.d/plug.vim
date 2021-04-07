@@ -20,5 +20,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language Server Protocol
 
 " Language Support
 Plug 'dag/vim-fish'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()

@@ -165,3 +165,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " extensions
 let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-git']
 
+" 
+" Rust
+"
+
+let g:rustfmt_autosave = 1

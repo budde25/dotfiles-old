@@ -31,27 +31,29 @@ set -gx ANDROID_SDK_HOME $XDG_DATA_HOME/android
 
 # Prefered editor
 if command -v nvim > /dev/null
-	set -gx EDITOR nvim
-	set -gx VISUAL nvim
+    set -gx EDITOR nvim
+    set -gx VISUAL nvim
 else if command -v vim > /dev/null
-	set -gx EDITOR vim
-	set -gx VISUAL vim
+    set -gx EDITOR vim
+    set -gx VISUAL vim
 else
-	set -gx EDITOR nano
+    set -gx EDITOR nano
 end
 
 if test -n "$DISPLAY"
-	if command -v firefox-developer-edition > /dev/null
-		set -gx BROWSER firefox-developer-edition
-	else if command -v firefox > /dev/null
-		set -gx BROWSER firefox
-	end
+    if command -v firefox-developer-edition > /dev/null
+        set -gx BROWSER firefox-developer-edition
+    else if command -v firefox > /dev/null
+	set -gx BROWSER firefox
+    end
 else
-	set -gx BROWSER links
+    set -gx BROWSER links
 end
 
 if command -v rg > /dev/null
-  set -gx FZF_DEFAULT_COMMAND rg --files --hidden
-  set -gx FZF_DEFAULT_OPTS -m --height 50% --border
+    # show hidden files but don't show .git directory
+    # https://github.com/BurntSushi/ripgrep/issues/340
+    set -gx FZF_DEFAULT_COMMAND rg --files --hidden --glob '!.git'
+    set -gx FZF_DEFAULT_OPTS -m --height 50% --border
 end
 

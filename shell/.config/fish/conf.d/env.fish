@@ -51,7 +51,7 @@ else
 end
 
 if command -v rg > /dev/null
-  set -gx FZF_DEFAULT_COMMAND rg --files
+  set -gx FZF_DEFAULT_COMMAND rg --files --hidden
   set -gx FZF_DEFAULT_OPTS -m --height 50% --border
 end
 

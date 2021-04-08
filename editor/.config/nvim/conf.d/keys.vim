@@ -27,3 +27,8 @@ vnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y "+y$
+
+" Esc position bad, CAPS-LOCK is bound to ctrl
+inoremap <C-l> <Esc>
+" Muscle Memory
+inoremap <Esc> <nop>

@@ -47,3 +47,22 @@ window:
   padding:
     x: 10
     y: 10
+
+font:
+  normal:
+    family: Fira Mono
+    style: Regular
+
+  bold:
+    family: Fira Mono
+    style: Bold
+
+  italic:
+    family: Fira Mono
+    style: Italic
+
+  bold_italic:
+    family: Fira Mono
+    style: Bold Italic
+
+  size: 11

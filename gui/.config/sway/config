@@ -23,8 +23,8 @@ font Fira Mono: Regular 12
 focus_follows_mouse no
 
 # Gaps around apps
-gaps inner 12
-gaps outer 1
+# gaps inner 12
+# gaps outer 1
 
 # No title or borderk
 hide_edge_borders none

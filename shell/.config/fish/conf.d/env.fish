@@ -29,6 +29,9 @@ set -gx LESSHISTFILE -
 set -gx ANDROID_SDK_ROOT $XDG_DATA_HOME/android
 set -gx ANDROID_SDK_HOME $XDG_DATA_HOME/android
 
+# allow for GPG password be used in terminal and over SSH
+set -gx GPG_TTY (tty)
+
 # Prefered editor
 if command -v nvim > /dev/null
     set -gx EDITOR nvim
@@ -40,6 +43,7 @@ else
     set -gx EDITOR nano
 end
 
+# Add a working browser if possible
 if test -n "$DISPLAY"
     if command -v firefox-developer-edition > /dev/null
         set -gx BROWSER firefox-developer-edition
@@ -50,6 +54,7 @@ else
     set -gx BROWSER links
 end
 
+# If ripgrep is install we want to use it for FZF
 if command -v rg > /dev/null
     # show hidden files but don't show .git directory
     # https://github.com/BurntSushi/ripgrep/issues/340

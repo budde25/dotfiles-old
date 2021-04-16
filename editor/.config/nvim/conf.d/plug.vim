@@ -25,5 +25,6 @@ Plug 'junegunn/fzf.vim'
 " Language Support
 Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
+Plug 'tikhomirov/vim-glsl'
 
 call plug#end()

@@ -63,3 +63,8 @@ if status --is-interactive
     source "$BASE16_SHELL/profile_helper.fish"
 end
 
+
+# Setup rvm if available
+if command -v rvm > /dev/null
+    rvm default
+end

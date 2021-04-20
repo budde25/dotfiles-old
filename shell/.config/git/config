@@ -1,0 +1,21 @@
+[user]
+    name = Ethan Budd
+    email = budde25@protonmail.com
+    signingkey = 1BC75D3A8D06C7A5
+[ui "color"]
+    ui = always
+[color]
+    ui = true
+[core]
+    autocrlf = input
+    safecrlf = true
+    editor = $EDITOR
+[pull]
+    rebase = false
+[github]
+    user = budde25
+[alias]
+    s = status
+    c = commit
+[commit]
+    gpgsign = true

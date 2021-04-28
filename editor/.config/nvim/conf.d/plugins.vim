@@ -166,9 +166,10 @@ vmap <leader>q  <Plug>(coc-format-selected)
 nmap <leader>q  <Plug>(coc-format-selected)
 
 " extensions
-let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-git', 'coc-html', 'coc-eslint', 'coc-prettier', 'coc-yaml']
+let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-git', 'coc-html', 'coc-eslint', 'coc-prettier', 'coc-yaml', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-tslint-plugin']
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 
 " 
 " Rust

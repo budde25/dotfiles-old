@@ -18,13 +18,18 @@ Plug 'machakann/vim-highlightedyank' " Highlights yanked test
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language Server Protocol
 
+" Syntax
+Plug 'sheerun/vim-polyglot'
+
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Editing
+Plug 'jiangmiao/auto-pairs'
+
 " Language Support
 Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
-Plug 'tikhomirov/vim-glsl'
 
 call plug#end()

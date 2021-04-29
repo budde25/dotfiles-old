@@ -15,6 +15,8 @@ set $term alacritty
 # Application launcher
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
 set $menu exec j4-dmenu-desktop --dmenu='bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12"' --term=$term
+set $wallpaper $HOME/Pictures/wallpaper.png
+set $lock swaylock -f -i $wallpaper -s fill
 
 # Font
 font Fira Mono: Regular 12
@@ -31,14 +33,14 @@ hide_edge_borders none
 default_border none
 
 ### Output configuration
-output * bg $HOME/Pictures/wallpaper.png fill
+output * bg $wallpaper fill
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 '$lock' \
          timeout 600 'swaymsg "output * dpms off"' \
 	 resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep '$lock'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -68,6 +70,9 @@ input type:keyboard {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Lock the screen
+    bindsym $mod+semicolon exec $lock
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

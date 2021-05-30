@@ -68,3 +68,8 @@ end
 if command -v rvm > /dev/null
     rvm default
 end
+
+status is-login; and pyenv init --path | source
+pyenv init - | source
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

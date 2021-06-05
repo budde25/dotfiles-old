@@ -183,3 +183,9 @@ let g:rustfmt_autosave = 1
 noremap <leader>s :Rg<CR>
 nnoremap <leader>f :Files<CR>
 let g:fzf_layout = { 'down': '~20%' }
+
+"
+" Nerdtree
+"
+
+nnoremap <leader>n :NERDTreeFocus<CR>

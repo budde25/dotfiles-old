@@ -18,6 +18,8 @@ set -g fish_prompt_pwd_dir_length 3
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showdirtystate 'yes'
 
+fish_vi_key_bindings
+
 # abbrivations > alias
 abbr -a g  'git'
 abbr -a ga 'git add -p'

@@ -18,6 +18,8 @@ set gdefault
 set splitright
 set splitbelow
 
+set backspace = 2
+
 " Prevent accidental writes to buffers that shouldn't be edited
 autocmd BufRead *.orig set readonly
 autocmd BufRead *.pacnew set readonly

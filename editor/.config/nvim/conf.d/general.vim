@@ -18,7 +18,10 @@ set gdefault
 set splitright
 set splitbelow
 
-set backspace = 2
+" Terrible backspace defaults for older vim
+if has("vi")
+    set backspace=indent,eol,start
+endif
 
 " Prevent accidental writes to buffers that shouldn't be edited
 autocmd BufRead *.orig set readonly
@@ -28,8 +31,8 @@ autocmd! BufNewFile,BufRead *.vs,*.fs set ft=glsl
 
 " Jump to last edit position on opening file
 if has("autocmd")
-  " https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
-  au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    " https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
+    au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 " Editor

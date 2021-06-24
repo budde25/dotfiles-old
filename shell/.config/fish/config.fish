@@ -41,10 +41,10 @@ else
 end
 
 if command -v exa > /dev/null
-	abbr -a l 'exa'
-	abbr -a ls 'exa'
-	abbr -a ll 'exa -l'
-	abbr -a lll 'exa -la'
+	abbr -a l 'exa --git --git-ignore --group-directories-first'
+	abbr -a ls 'exa --git --git-ignore --group-directories-first'
+	abbr -a ll 'exa -l --icons --git --git-ignore --group-directories-first'
+	abbr -a lll 'exa -la --icons --git --group-directories-first'
 else
 	abbr -a l 'ls'
 	abbr -a ll 'ls -l'

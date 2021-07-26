@@ -76,17 +76,18 @@ if test -e /home/linuxbrew/.linuxbrew/bin/brew
     eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
 
-if test -d (brew --prefix)"/share/fish/completions"
-    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
-end
-
-if test -d (brew --prefix)"/share/fish/vendor_completions.d"
-    set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+if command -v brew > /dev/null
+    if test -d (brew --prefix)"/share/fish/completions"
+        set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/completions
+   end
+   if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+       set -gx fish_complete_path $fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+   end
 end
 
 if command -v pyenv > /dev/null
-    #status is-login; and pyenv init --path | source
-    #pyenv init - | source
+    status is-login; and pyenv init --path | source
+    pyenv init - | source
 end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

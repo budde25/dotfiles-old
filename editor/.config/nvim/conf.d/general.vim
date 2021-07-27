@@ -64,9 +64,11 @@ set ruler " Show line and char
 set showcmd " Show in progess commands
 set shortmess+=c
 " Diff
-set diffopt+=iwhite " Ignore whitespace
-set diffopt+=algorithm:patience
-set diffopt+=indent-heuristic
+if has('nvim')
+    set diffopt+=iwhite " Ignore whitespace
+    set diffopt+=algorithm:patience
+    set diffopt+=indent-heuristic
+endif
 
 " Show hidden characters
 set listchars=nbsp:¬,extends:»,precedes:«,trail:•

@@ -14,7 +14,10 @@ Plug 'preservim/nerdtree'
 
 " GUI
 Plug 'itchyny/lightline.vim' " Bottom 'powerline' bar
-Plug 'machakann/vim-highlightedyank' " Highlights yanked test
+
+if !has('nvim-0.5')  " builtin to neovim
+    Plug 'machakann/vim-highlightedyank' " Highlights yanked test
+endif
 
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language Server Protocol

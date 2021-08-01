@@ -35,6 +35,12 @@ if has("autocmd")
     au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Highlight yank (neovim 0.5+ only)
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=700 } 
+augroup END
+
 " Editor
 filetype plugin indent on
 syntax enable

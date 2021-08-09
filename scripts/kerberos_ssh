@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+
+set timeout 20
+
+set cmd [lrange $argv 0 end]
+set password [exec pass w3/ethan.budd@ibm.com]
+
+eval spawn $cmd
+expect "assword:"
+send "$password\r";
+interact

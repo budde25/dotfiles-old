@@ -90,4 +90,8 @@ if command -v pyenv > /dev/null
     pyenv init - | source
 end
 
+if command -v zoxide > /dev/null
+    zoxide init fish | source
+end
+
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
